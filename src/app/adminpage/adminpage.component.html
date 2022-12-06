@@ -1,0 +1,30 @@
+<app-logout></app-logout>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bar" id="btn"></i>
+            <i class="fas fa-time" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>MOVIE REVIEW</header>
+            <ul>
+                <li><a routerLink="/addmovie"><i class="fas fa-arrow-right">Add Movies</i></a></li>
+                <li><a href="/deletmovie"><i class="bi bi-arrow-right">Delete Movies</i></a></li>
+                <li><a routerLink="/userlist" routerLinkActive="active">UserList</a></li>
+                <li><a routerLink="/movielist" routerLinkActive="active">Movie List</a></li>
+                <li><a routerLink="/deleteUser" routerLinkActive="active">Delete Users</a></li>
+            </ul>
+
+        </div>
+        <section> </section>
+
+
+    </body>
+</html>

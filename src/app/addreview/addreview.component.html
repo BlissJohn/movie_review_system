@@ -1,0 +1,35 @@
+<app-logout></app-logout>
+<div class="container">
+    <form (ngSubmit)="OnSubmit()">
+      
+      <br>
+      <label>Movie Name:</label>
+      <input type="text" name="MovieName" [(ngModel)]= "movieReviews1.movieName">
+      <label>Choose rating:</label>
+      <input type="number" name ="Rating" [(ngModel)]= "movieReviews1.rating">
+      <!-- <ngb-rating [(rate)]= "myrating"></ngb-rating> -->
+    <br> 
+      <label for="Description">Comments</label>
+      <textarea name="Comments" placeholder="Write something.." style="height:200px" [(ngModel)]= "movieReviews1.comments"></textarea>
+      <a [routerLink]="['/movielist']">Submit</a>
+    </form>
+  </div>
+
+  <!-- <app-header></app-header>
+<h2>Movies List</h2>
+<table class="table table-striped">
+
+    <thead>
+        <th>Rating</th>
+        <th>Commments</th>
+      
+    </thead>
+    <tbody>
+        <tr *ngFor = "let movieReview of movieReviews">
+            <td>{{movieReview.rating}}</td>
+           <td>{{movieReview.comments}}</td>
+           
+        </tr>
+    </tbody>
+    
+</table> -->

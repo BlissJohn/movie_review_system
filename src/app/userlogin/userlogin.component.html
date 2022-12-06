@@ -1,0 +1,40 @@
+<app-logout></app-logout>
+<!DOCTYPE html>
+<html>
+
+    <body>
+      <div class="b">
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-5">
+     <div class="card">
+       <h2 class="card-title text-center">USER LOGIN</h2>
+        <div class="card-body py-md-4">
+         <form _lpchecked="1">
+            <div class="form-group">
+               <input type="text" class="form-control" name="username" placeholder="email" [(ngModel)]="login.email">
+          </div>
+          
+                              
+                            
+     <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="password" [(ngModel)]="login.password">
+     </div>
+     
+     <div class="d-flex flex-row align-items-center justify-content-between">
+      <div class-="error">{{ errormsg}}</div>
+      <button class="btn"(click)="loginn()">Login</button>
+      <button (click)="goToPage('forgotpassword')"class="btt">Forgot Password?</button>
+
+                                  <button (click)="goToPage('registerloginpage')"class="btc">Create Account</button>
+                                  
+            </div>
+         </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  </div>
+      </div>
+    </body>
+</html>

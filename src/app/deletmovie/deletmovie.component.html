@@ -1,0 +1,22 @@
+<app-logout></app-logout>
+<h2>Movies List</h2>
+<table class="table table-striped">
+
+    <thead>
+        <th>MoveId</th>
+        <th>Movie Name</th>
+        <!-- <th>Image</th> -->
+        <th>Description</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let movie of movies">
+            <td>{{movie.id}}</td>
+           <td>{{movie.name}}</td>
+           <!-- <td><img src= "" /></td> -->
+           <td>{{movie.description}}</td>
+           <td> <button (click) = "deleteMovie(movie.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button></td>
+        </tr>
+    </tbody>
+    
+</table>

@@ -1,0 +1,284 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .rating > input{ display:none;}
+  
+  .rating > label {
+    position: relative;
+      width: 1em;
+      font-size: 6vw;
+      color: #FFD600;
+      cursor: pointer;
+  }
+  .rating > label::before{ 
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+  }
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before {
+    opacity: 1 !important;
+  }
+  
+  .rating > input:checked ~ label:before{
+    opacity:1;
+  }
+  
+  .rating:hover > input:checked ~ label:before{ opacity: 0.4; }
+  .btn{
+    padding: 0.6rem 1.2rem;
+    background: #a6a02f;
+    border: 2px solid #f7f7f7;
+  }
+  .movie-container {
+
+    width: 1400px;
+  
+    margin: 0 auto;
+  
+    padding: 50px;
+  
+  }
+  
+  .movie-container .top {
+  
+    display: flex;
+  
+  }
+  
+  .movie-container .top .left {
+  
+    width: 450px;
+  
+  }
+  
+  .movie-container .top .left .name {
+  
+    font-size: 36px;
+  
+    font-weight: bold;
+  
+  }
+  
+  .movie-container .top .left .rating {
+  
+    display: flex;
+  
+    align-items: center;
+  
+    margin-bottom: 15px;
+  
+  }
+  
+  .movie-container .top .left .rating .rating-value {
+  
+    margin-left: 20px;
+  
+    font-weight: bold;
+  
+  }
+  
+  
+  .movie-container .top .left .cover {
+  
+    width: 400px;
+  
+    height: 500px;
+  
+    margin-right: 50px;
+  
+  }
+  
+  .movie-container .top .left .cover img {
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    object-fit: cover;
+  
+  }
+  
+  .movie-container .top .right {
+  
+    width: 900px;
+  
+    padding-top: 100px;
+  
+  }
+  
+  .movie-container .top .right .title {
+  
+    margin-bottom: 30px;
+  
+  }
+  
+  .movie-container .top .right .rating-form .form-group {
+  
+    margin-top: 20px;
+  
+  }
+  
+  .movie-container .top .right .rating-form .form-group .rating {
+  
+    margin-top: -13px;
+  
+  }
+  
+  .movie-container .top .right .rating-form .form-group label {
+  
+    font-weight: bold;
+  
+    margin-bottom: 5px;
+  
+  }
+  
+  .movie-container .top .right .rating-form .form-group textarea {
+  
+    resize: none;
+  
+  }
+  
+  
+  
+  
+  .movie-container .top .right .rating-form .btn-container {
+  
+    margin-top: 30px;
+  
+  }
+  
+  .movie-container .bottom {
+  
+    margin-top: 50px;
+  
+  }
+  
+  .movie-container .bottom .title {
+  
+    margin-bottom: 30px;
+  
+  }
+  
+  .movie-container .bottom .reviews {
+  
+    width: 1000px;
+  
+  }
+  
+  .movie-container .bottom .reviews .review {
+  
+    margin-bottom: 25px;
+  
+    background-color: lightgray;
+  
+    padding: 20px;
+  
+    border-radius: 5px;
+  
+  }
+  
+  .movie-container .bottom .reviews .review .review-details {
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  .movie-container .bottom .reviews .review .review-details .review-left .author {
+  
+    font-size: 18px;
+  
+    font-weight: bold;
+  
+  }
+  
+  .movie-container .bottom .reviews .review .review-details .review-left .author-dt {
+  
+    opacity: 0.7;
+  
+  }
+  
+  .movie-container .bottom .reviews .review .review-details .review-right .rating {
+  
+    display: flex;
+  
+    align-items: center;
+  
+  }
+  
+  
+  
+  
+  .movie-container .bottom .reviews .review .review-details .review-right .rating .rating-value {
+  
+    margin-left: 20px;
+  
+    font-weight: bold;
+  
+  }
+  
+  .movie-container .bottom .reviews .review .review-text {
+  
+    font-style: italic;
+  
+    font-size: 18px;
+  
+  }
+  
+  .movie-container .bottom .reviews .no-reviews {
+  
+    font-style: italic;
+  
+    font-size: 18px;
+  
+  }
+  .fancy {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: 110% auto;
+      background-position: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
