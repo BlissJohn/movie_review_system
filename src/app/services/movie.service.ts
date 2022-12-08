@@ -24,4 +24,7 @@ export class MovieService {
   getMovie(id:number): Observable<Object>{
     return this.httpClient.get(`${this.baseUrl}/${id}`);
   }
+  updateMovie(movie:Movie,id:number): Observable<Object>{
+    return this.httpClient.put(`${this.baseUrl}/${id}`,movie,{responseType: 'text'});
+  }
 }

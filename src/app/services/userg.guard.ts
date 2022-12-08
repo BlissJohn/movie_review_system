@@ -11,7 +11,7 @@ export class UsergGuard implements CanActivate {
   canActivate( route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (this.userService.isloggedin()) { return true; }
-    else { alert("You must login as user"); this.rtr.navigate(["userloginpage"]); return false;  }
+    else { alert("You must login as user"); this.rtr.navigate(["userlogin"]); return false;  }
 
   }
 

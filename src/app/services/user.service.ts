@@ -24,6 +24,9 @@ export class UserService {
   deleteEmployee(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseUrl}/${id}`);
   }
+  updateUser(user:User,id:number): Observable<Object>{
+    return this.httpClient.put(`${this.baseUrl}/${id}`,user,{responseType: 'text'});
+  }
 
   authenticateUser(login:any):Observable<Object>{
     return this.httpClient.post(`${this.baseUrl1}`,login);
