@@ -20,18 +20,18 @@
     </tbody>
     
 </table> -->
-<div class ="main">
+<!-- <div class ="main">
     <div class="bx" *ngFor = "let movie of movies">
       <img src= "{{movie.image}}" alt="" style=" width: 200px ; height:300px">
       <div class="content">
         <h3>{{movie.name}}</h3>
         <p>{{movie.description}}</p>
-        <p><p><b>Rating:</b>{{ratingOfMovie(movie)}}</p>
+        <p><p><b>Rating:</b>{{ratingOfMovie(movie)}}</p> -->
        
         <!-- <h6><span>WAC</span><i class="bi bi-star-fill"></i>rating</h6> -->
-      </div>
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
 <!-- <div ng-app="MyApp" ng-controller="MyController">
     <img ng-src="{{movies.image}}" style="height: 100px; width: 100px" />
     <br />
@@ -106,4 +106,50 @@
     </div>
   </div>-->
 
+  <div class="home-container">
 
+    <div class="all-movies">
+  
+      <div class="trending-movies">
+  
+        <div class="top">
+  
+          <h4>Movie List:</h4>
+  
+  
+  
+        </div>
+  
+        <div class="movies-thumbnail">
+          <div fxLayout="row wrap">
+  
+             <div class=" movie" fxFlex="20%" *ngFor="let movie of movies">
+  
+            <div class="cover" [routerLink]= "['/home',movie.id]">
+  
+              <img [src]="movie.image" alt="" />
+  
+            </div>
+  
+            <div class="detail">
+  
+              <div class="name" [routerLink]= "['/home',movie.id]"><h5>{{ movie.name }} :)</h5></div>
+  
+              <div class="rating">
+                 <span  class="rating-value"><h5>Rating: {{ ratingOfMovie(movie) }}</h5></span>
+  
+                
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+        </div>
+        
+      </div>
+  
